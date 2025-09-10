@@ -1,0 +1,81 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logform {
+    padding: 60px 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 90px;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 35px;
+}
+
+.loginform input {
+    width: 350px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    transition: 0.5s;
+}
+
+.loginform input:focus {
+    border-color: #000;
+    transition: 0.5s;
+}
+
+.logbtn {
+     border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transform: scale(1);
+    transition: 0.7s;
+}
+
+.logbtn::before {
+    position: absolute;
+    content: '';
+    transition: 0.7s;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    z-index: -1;
+    transform: scale(0);
+    background-color: #fabb00;
+}
+
+.logbtn:hover::before {
+    transform: scale(1);
+}
+
+.logbtn:hover {
+    color: #fff;
+    transition: 0.7s;
+} 
+
+.forgot{
+    text-decoration: none;
+    color: blue;
+}
+
+.register{
+    text-decoration: none;
+    color: rgb(0, 156, 0);
+}

@@ -1,0 +1,111 @@
+.sign {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signform {
+    padding: 60px 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 90px;
+    width: 700px;
+}
+
+.signp input {
+    width: 230px;
+    max-width: 250px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    transition: 0.5s;
+    margin-left: 26px;
+}
+
+input:focus {
+    border-color: #000;
+    transition: 0.5s;
+}
+
+.signbtn {
+    border: none;
+    padding: 15px 0px;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+}
+
+.signp {
+    display: flex;
+    flex-wrap: wrap !important;
+    gap: 13px;
+    margin-top: 35px;
+    justify-content: center;
+    position: relative;
+
+}
+
+.phoneNumber {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.nomargin {
+    margin: 0 !important;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 5px;
+
+}
+
+
+.error1 {
+    position: absolute;
+    left: 1px;
+}
+
+.error2 {
+    position: absolute;
+    left: 270px;
+}
+
+.error3 {
+    position: absolute;
+    top: 55px;
+    left: 1px;
+}
+
+.error4 {
+    position: absolute;
+    top: 55px;
+    left: 270px;
+}
+
+.error5 {
+    position: absolute;
+    top: 113px;
+    left: 1px;
+}
+
+.error6{
+    position: absolute;
+    top: 113px;
+    left: 270px;
+}
+
+.register{
+    text-decoration: none;
+    color: rgb(0, 156, 0);
+}

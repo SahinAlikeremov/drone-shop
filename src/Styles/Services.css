@@ -1,0 +1,58 @@
+.servo-head {
+    text-align: center;
+}
+
+.map-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.map-area2 {
+    position: relative;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: not-allowed;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.services-location {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.services-desc {
+    display: flex;
+    flex-direction: column;
+    align-content: left;
+    width: 790px;
+    margin-top: 30px;
+}
+
+.chino {
+    width: 450px;
+    margin-bottom: 10px;
+}
+
+.servo-address {
+    color: rgb(82, 82, 82);
+}
+
+.rp {
+    margin-left: 20px !important;
+}
+
+.farlands {
+    margin-bottom: 30px;
+}
