@@ -40,6 +40,7 @@ const accessories = [
 
 function Accessories({ addToCart }) {
     console.log("Accessories addToCart prop:", addToCart);
+      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true"; // ✅ burda yoxlanılır
     return (
 
         <div className="accessories-page">
@@ -52,7 +53,14 @@ function Accessories({ addToCart }) {
                         <p>${item.price}</p>
                         <button
                             className="orden"
-                            onClick={() => addToCart({ name: item.name, price: item.price })}
+                            onClick={() => {
+                                if (!isLoggedIn) {
+                                    alert("Please first Log In or Sign Up!");
+                                    return;
+                                }else{
+                                addToCart({ name: item.name, price: item.price });
+                                }
+                            }}
                         >
                             Add to Cart
                         </button>

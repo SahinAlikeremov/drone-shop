@@ -301,3 +301,161 @@ main {
 .left-text-show{
     text-align: left;
 }
+
+/* Tablet ve altı (≤1024px) */
+@media (max-width: 1024px) {
+  .dji-image, .main-image {
+    height: auto;   /* yükseklik sabit olmasın */
+  }
+
+  .inside {
+    width: 90%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .inside h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .inside p {
+    font-size: 20px;
+  }
+
+  .guides {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .guide {
+    width: 45%;
+    height: 300px;
+  }
+
+  .choose-container {
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+
+  .choose-container img {
+    width: 45% !important;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  .blog-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .blog-image-wrapper {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+/* Telefon (≤768px) */
+@media (max-width: 768px) {
+  .inside h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .inside p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .shop-btn {
+    padding: .5rem 1.2rem;
+    font-size: 14px;
+  }
+
+  .guides {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guide {
+    width: 90%;
+    height: 220px;
+  }
+
+  .choose-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choose-container img {
+    width: 80% !important;
+    height: auto;
+  }
+
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-image-wrapper {
+    width: 90%;
+    height: auto;
+  }
+
+  .main-container h1 {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main-image {
+    margin-top: 40px;  
+  }
+}
+
+
+
+/* Mobil və tablet (responsiv) üçün */
+@media (max-width: 768px) {
+  .main-image {
+    margin-top: 40px; /* şəkil ilə yuxarıdan boşluq */
+  }
+
+  .inside {
+    width: 90%;               /* daha geniş saxla ki, mətni sındırmasın */
+    margin: 0 auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* mərkəzə gətir */
+    justify-content: center;
+    gap: 6px;                 /* yazılarla düymə arasında boşluq */
+  }
+
+  .inside h1 {
+    font-size: 18px;
+    line-height: 16px;
+  }
+
+  .inside p {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .shop-btn {
+    margin-top: 0;             /* artıq margin silinib */
+    font-size: 14px;
+    padding: .3rem 1.2rem;
+  }
+
+    .inside h2 {
+    font-size: 18px;        /* başlıq daha kiçik */
+    line-height: 24px;
+    color: rgba(255,255,255,0.7); /* oxunaqlılıq üçün */
+  }
+}

@@ -56,3 +56,32 @@
 .farlands {
     margin-bottom: 30px;
 }
+
+/* Tablet və mobil üçün map düzəlişi */
+@media (max-width: 1024px) {
+  .map-area2 iframe {
+    width: 100% !important;   /* ekrana uyğunlaşsın */
+    height: 350px !important; /* daha balaca hündürlük */
+  }
+
+  .services-desc {
+    width: 95% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .map-area2 iframe {
+    width: 100% !important;
+    height: 250px !important; /* telefon üçün */
+  }
+
+  .services-desc {
+    width: 100% !important;
+    padding: 0 10px;
+  }
+
+  .chino {
+    width: 100% !important;
+    font-size: 14px;
+  }
+}

@@ -23,7 +23,7 @@ const categories = ['Entry-Level', 'Advanced', 'Flagship', 'Immersive', 'Cinemat
 
 function Drones() {
     const navigate = useNavigate();
-
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
     const addToCartInstant = (drone) => {
         setCart(prev => {
             if (prev.find(i => i.name === drone.name)) return prev;
@@ -55,11 +55,18 @@ function Drones() {
 
 
     const addToCart = (drone) => {
+
+        if (!isLoggedIn) {
+            alert("Please first Log In or Sign Up!");
+            return;
+        }
+
         setCart(prev => {
             if (prev.find(item => item.name === drone.name)) return prev;
             return [...prev, drone];
 
         });
+
     };
 
     const removeFromCart = (name) => {
@@ -102,12 +109,18 @@ function Drones() {
                             <h3>From USD $419</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Mini 3", price: 419 };
-                                    addToCart(drone);
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
+
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Mini 3", price: 419 };
+                                        addToCart(drone);
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
+                                    }
                                 }}
                             >
                                 {addedMessage["DJI Mini 3"] ? "Added to Cart" : "Buy now"}
@@ -121,15 +134,21 @@ function Drones() {
                             <h3>From USD $439</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Flip", price: 439 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Flip", price: 439 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
-                                }}
+                                }
+                                }
                             >
                                 {addedMessage["DJI Flip"] ? "Added to Cart" : "Buy now"}
                             </button>
@@ -142,14 +161,19 @@ function Drones() {
                             <h3>From USD $199</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Neo", price: 199 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Neo", price: 199 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
                                 }}
                             >
                                 {addedMessage["DJI Neo"] ? "Added to Cart" : "Buy now"}
@@ -167,15 +191,21 @@ function Drones() {
                             <h3>From USD $1,099</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Air 3S", price: 1099 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Air 3S", price: 1099 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
-                                }}
+                                }
+                                }
                             >
                                 {addedMessage["DJI Air 3S"] ? "Added to Cart" : "Buy now"}
                             </button>
@@ -188,15 +218,21 @@ function Drones() {
                             <h3>From USD $759</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Mini 4 Pro", price: 759 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Mini 4 Pro", price: 759 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
-                                }}
+                                }
+                                }
                             >
                                 {addedMessage["DJI Mini 4 Pro"] ? "Added to Cart" : "Buy now"}
                             </button>
@@ -213,15 +249,21 @@ function Drones() {
                             <h3>From USD $2,199</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Mavic 3 Pro", price: 2199 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Mavic 3 Pro", price: 2199 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
-                                }}
+                                }
+                                }
                             >
                                 {addedMessage["DJI Mavic 3 Pro"] ? "Added to Cart" : "Buy now"}
                             </button>
@@ -234,15 +276,21 @@ function Drones() {
                             <h3>From USD $1,179</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Mavic 3 Classic", price: 1179 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Mavic 3 Classic", price: 1179 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
-                                }}
+                                }
+                                }
                             >
                                 {addedMessage["DJI Mavic 3 Classic"] ? "Added to Cart" : "Buy now"}
                             </button>
@@ -264,14 +312,19 @@ function Drones() {
                                     <p>From USD $999</p>
                                     <button
                                         onClick={() => {
-                                            const drone = { name: "DJI Avata 2", price: 999 };
-                                            if (!cart.find(item => item.name === drone.name)) {
-                                                setCart([...cart, drone]);
+                                            if (!isLoggedIn) {
+                                                alert("Please first Log In or Sign Up!");
+                                                return;
+                                            } else {
+                                                const drone = { name: "DJI Avata 2", price: 999 };
+                                                if (!cart.find(item => item.name === drone.name)) {
+                                                    setCart([...cart, drone]);
+                                                }
+                                                setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                                setTimeout(() => {
+                                                    setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                                }, 900);
                                             }
-                                            setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                            setTimeout(() => {
-                                                setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                            }, 900);
                                         }}
                                     >
                                         {addedMessage["DJI Avata 2"] ? "Added to Cart" : "Buy now"}
@@ -385,14 +438,19 @@ function Drones() {
                             <h3>From USD $16,499</h3>
                             <button
                                 onClick={() => {
-                                    const drone = { name: "DJI Inspire 3 (Zenmuse X9-8K Air)", price: 16499 };
-                                    if (!cart.find(item => item.name === drone.name)) {
-                                        setCart([...cart, drone]);
+                                    if (!isLoggedIn) {
+                                        alert("Please first Log In or Sign Up!");
+                                        return;
+                                    } else {
+                                        const drone = { name: "DJI Inspire 3 (Zenmuse X9-8K Air)", price: 16499 };
+                                        if (!cart.find(item => item.name === drone.name)) {
+                                            setCart([...cart, drone]);
+                                        }
+                                        setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
+                                        setTimeout(() => {
+                                            setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                        }, 900);
                                     }
-                                    setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
-                                    setTimeout(() => {
-                                        setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
-                                    }, 900);
                                 }}
                             >
                                 {addedMessage["DJI Inspire 3 (Zenmuse X9-8K Air)"] ? "Added to Cart" : "Buy now"}

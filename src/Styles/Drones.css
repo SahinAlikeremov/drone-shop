@@ -268,3 +268,106 @@ body {
     padding-left: 74px;
     margin-top: -122px;
 }
+
+/* Tablet ve altı (≤1024px) */
+@media (max-width: 1024px) {
+  .drone-container {
+    flex-wrap: wrap;           /* kartlar alta geçsin */
+    justify-content: center;   /* ortala */
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .card img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .avata-top-container {
+    flex-direction: column;   /* dikey hizala */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .right-panel {
+    padding-left: 0;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .avata-selection {
+    width: 100%;
+  }
+
+  .avata-section {
+    flex-direction: column;   /* resim altta olsun */
+    align-items: center;
+  }
+
+  .details {
+    margin-top: 24px;
+  }
+
+  .details p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+/* Telefon (≤768px) */
+@media (max-width: 768px) {
+  .head-name {
+    font-size: 36px;
+  }
+
+  .total-drone h2 {
+    font-size: 24px;
+  }
+
+  .category-tabs {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  .card img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .avata-container {
+    padding: 24px;
+  }
+
+  .head-name-avata {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .sale p {
+    font-size: 16px;
+  }
+
+  .sale button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}

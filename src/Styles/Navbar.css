@@ -16,20 +16,23 @@ body {
     position: relative;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    padding: 2rem 2rem;
-    background-color: rgba(33, 37, 41, 0.95);
-    background-image: url(../images/brennan-martinez-TtJNbsmP_fU-unsplash.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 75%;
-    border-radius: 6px;
-    margin-bottom: 30px;
+/* Desktop menyu */
+@media (min-width: 769px) {
+  ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      padding: 2rem 2rem;
+      background-color: rgba(33, 37, 41, 0.95);
+      background-image: url(../images/brennan-martinez-TtJNbsmP_fU-unsplash.jpg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 75%;
+      border-radius: 6px;
+      margin-bottom: 30px;
+  }
 }
 
 li+li {
@@ -71,10 +74,10 @@ li a:hover::before {
 
 .active:hover::before {
     width: 100%;
-    box-shadow: 0 0 8px white 0 0 16px white;
+    box-shadow: 0 0 8px white, 0 0 16px white;
 }
 
-nav {
+.desktop-auth {
     margin-top: 32px;
     position: absolute;
     left: 89%;
@@ -86,14 +89,15 @@ nav {
     width: 160px;
     display: flex;
     justify-content: space-between;
+    margin-right: 20px;
 }
 
-nav a+a {
+.desktop-auth a+a {
     margin-left: 20px;
     color: #FABB00;
 }
 
-nav a {
+.desktop-auth a {
     color: #fff;
     text-decoration: none;
 }
@@ -114,4 +118,97 @@ nav a {
     border-radius: 5px;
     background-color: red;
     cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: black !important;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+}
+
+.navbar {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+/* Mobil menyu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    background-color: rgba(33, 37, 41, 0.95);
+    width: 70%;
+    height: 100vh;
+    padding-top: 80px;
+    transition: left 0.3s ease;
+    z-index: 1500;
+  }
+
+  .navbar.open {
+    left: 0;
+  }
+
+  .navbar li {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  /* Mobil auth düymələri */
+  .mobile-auth {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-auth a, 
+  .mobile-auth button {
+    margin: 10px 0;
+    color: #fff;
+  }
+
+  .desktop-auth {
+    display: none; /* mobil görünüşdə sağ yuxarı gizlədilir */
+  }
+}
+
+
+/* Default olaraq mobile-auth gizlədilir */
+.mobile-auth {
+  display: none;
+}
+
+/* Desktop auth default görünür */
+
+/* Mobil görünüş */
+@media (max-width: 768px) {
+  .mobile-auth {
+    display: flex;             /* mobil açıldıqda göstər */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .mobile-auth a, 
+  .mobile-auth button {
+    margin: 10px 0;
+    color: #fff;
+  }
+
+  .desktop-auth {
+    display: none;             /* mobil görünüşdə gizlət */
+  }
 }

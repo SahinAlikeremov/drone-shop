@@ -70,7 +70,6 @@ input:focus {
 
 }
 
-
 .error1 {
     position: absolute;
     left: 1px;
@@ -109,3 +108,46 @@ input:focus {
     text-decoration: none;
     color: rgb(0, 156, 0);
 }
+
+@media (max-width: 992px) {
+  .signform {
+    width: 90%;
+    padding: 40px 20px;
+    margin-top: 40px;
+  }
+
+  .signp {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .signp input {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .signbtn {
+    width: 100%;
+  }
+}
+
+/* ✅ Telefon görünümü */
+@media (max-width: 576px) {
+  .signform {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .signbtn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .signp {
+    gap: 10px;
+  }
+
+  
+}
+

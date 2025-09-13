@@ -28,12 +28,10 @@ hr {
     width: 70%;
     margin: 30px auto;
     border-collapse: collapse;
-    /* Hücreler arasında çift çizgi olmasın */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Hafif gölge efekti */
     border-radius: 8px;
     overflow: hidden;
-    /* Köşe yuvarlama için */
+
 }
 
 .cart-table th,
@@ -41,7 +39,7 @@ hr {
     padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    /* Alt çizgi */
+
 }
 
 .cart-table th {
@@ -51,13 +49,13 @@ hr {
 
 .cart-table tr:hover {
     background-color: #f9f9f9;
-    /* Hover efekti */
+
 }
 
 .cart-total td {
     font-weight: bold;
     border-top: 2px solid #333;
-    /* Toplam kısmını ayır */
+    
 }
 
 .remove-btn {
@@ -117,4 +115,34 @@ hr {
     background-color: #e0a600;
     cursor: pointer;
     transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .cart-table {
+    width: 95%; 
+    font-size: 14px; 
+  }
+
+  .cart-table th, 
+  .cart-table td {
+    padding: 8px 5px; 
+  }
+
+  .decBtn, .incBtn, .remove-btn, .orderBtn {
+    padding: 5px 8px;
+    font-size: 12px; 
+  }
+
+  .orderBtn {
+    float: none;      
+    display: block;    
+    margin: 10px auto;
+  }
+}
+
+/* Tabletler için */
+@media (max-width: 1024px) {
+  .cart-table {
+    width: 90%;
+  }
 }
