@@ -23,6 +23,7 @@ function Login() {
         if (user) {
             localStorage.setItem('isLoggedIn', 'true');
             navigate('/');
+             window.location.reload();
         } else {
             setError('Invalid email or password');
         }

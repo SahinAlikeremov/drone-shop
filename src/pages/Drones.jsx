@@ -116,6 +116,7 @@ function Drones() {
                                     } else {
                                         const drone = { name: "DJI Mini 3", price: 419 };
                                         addToCart(drone);
+                                               window.location.reload(); 
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
                                             setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
@@ -141,6 +142,7 @@ function Drones() {
                                         const drone = { name: "DJI Flip", price: 439 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
@@ -168,15 +170,18 @@ function Drones() {
                                         const drone = { name: "DJI Neo", price: 199 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
                                             setAddedMessage(prev => ({ ...prev, [drone.name]: false }));
+                                            
                                         }, 900);
                                     }
                                 }}
                             >
                                 {addedMessage["DJI Neo"] ? "Added to Cart" : "Buy now"}
+                                
                             </button>
                         </div>
                     </div>
@@ -198,6 +203,7 @@ function Drones() {
                                         const drone = { name: "DJI Air 3S", price: 1099 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
@@ -225,6 +231,7 @@ function Drones() {
                                         const drone = { name: "DJI Mini 4 Pro", price: 759 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
@@ -256,6 +263,7 @@ function Drones() {
                                         const drone = { name: "DJI Mavic 3 Pro", price: 2199 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
@@ -283,6 +291,7 @@ function Drones() {
                                         const drone = { name: "DJI Mavic 3 Classic", price: 1179 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
@@ -319,6 +328,7 @@ function Drones() {
                                                 const drone = { name: "DJI Avata 2", price: 999 };
                                                 if (!cart.find(item => item.name === drone.name)) {
                                                     setCart([...cart, drone]);
+                                                      window.location.reload(); 
                                                 }
                                                 setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                                 setTimeout(() => {
@@ -445,6 +455,7 @@ function Drones() {
                                         const drone = { name: "DJI Inspire 3 (Zenmuse X9-8K Air)", price: 16499 };
                                         if (!cart.find(item => item.name === drone.name)) {
                                             setCart([...cart, drone]);
+                                              window.location.reload(); 
                                         }
                                         setAddedMessage(prev => ({ ...prev, [drone.name]: true }));
                                         setTimeout(() => {
